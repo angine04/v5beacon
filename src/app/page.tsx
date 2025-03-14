@@ -25,8 +25,9 @@ interface User {
 // 获取时间问候语
 function getGreeting() {
   const hour = new Date().getHours();
-  if (hour < 12) return "早上好";
-  if (hour < 18) return "下午好";
+  if (hour < 12 && hour >= 6) return "早上好";
+  if (hour < 18 && hour >= 12) return "下午好";
+  if (hour < 6 && hour >= 0) return "夜深了";
   return "晚上好";
 }
 
