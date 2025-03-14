@@ -113,15 +113,15 @@ export default function Home() {
             </div>
             
             {/* 问候区域 */}
-            <div className="flex-grow flex flex-col pt-[20vh] pl-10 pr-6 sm:pl-16 sm:pr-10 lg:pl-20 lg:pr-12">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-2">
+            <div className="flex-grow flex flex-col pt-[20vh] pl-10 pr-6 sm:pl-16 sm:pr-10 lg:pl-20 lg:pr-12 mb-16">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-2 md:mb-3 lg:mb-4">
                 {session?.user?.name || '同学'}
               </h3>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
                 {greeting}
               </h2>
-              <div className="mt-8">
-                <div className="text-muted-foreground">
+              <div className="mt-6 md:mt-8 lg:mt-10">
+                <div className="text-muted-foreground text-lg md:text-base">
                   {new Date().toLocaleDateString('zh-CN', { 
                     year: 'numeric', 
                     month: '2-digit', 
