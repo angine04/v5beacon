@@ -162,4 +162,19 @@ export const services: ServiceItem[] = [
     url: "https://lens.npu5v5.cn",
     enabled: true,
   },
+  {
+    title: "Beacon",
+    description: "门户",
+    icon: (
+      <Image 
+        src="/service-logos/beacon.png" 
+        alt="Beacon Logo" 
+        width={48} 
+        height={48}
+        className="object-contain"
+      />
+    ),
+    url: "#",
+    enabled: true,
+  },
 ];
