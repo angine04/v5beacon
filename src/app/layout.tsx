@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import AuthProvider from "./components/AuthProvider";
+import { ThemeProvider } from "next-themes";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -21,32 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN" suppressHydrationWarning className={lato.variable}>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                  document.documentElement.classList.add('dark')
-                } else {
-                  document.documentElement.classList.remove('dark')
-                }
-
-                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-                  if (e.matches) {
-                    document.documentElement.classList.add('dark')
-                  } else {
-                    document.documentElement.classList.remove('dark')
-                  }
-                })
-              } catch (e) {}
-            `,
-          }}
-        />
-      </head>
+    <html lang="zh-CN" className={lato.variable} suppressHydrationWarning>
       <body className="font-sans antialiased">
-        <AuthProvider>{children}</AuthProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <AuthProvider>{children}</AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

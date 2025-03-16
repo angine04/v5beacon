@@ -115,7 +115,7 @@ export const services: ServiceItem[] = [
       />
     ),
     url: "https://ollama.aide.npu5v5.cn",
-    enabled: false,
+    enabled: true,
   },
   {
     title: "Pulse",
@@ -145,6 +145,21 @@ export const services: ServiceItem[] = [
       />
     ),
     url: "https://atlas.npu5v5.cn",
+    enabled: true,
+  },
+  {
+    title: "Lens",
+    description: "相册",
+    icon: (
+      <Image 
+        src="/service-logos/lens.png" 
+        alt="Lens Logo" 
+        width={48} 
+        height={48}
+        className="object-contain"
+      />
+    ),
+    url: "https://lens.npu5v5.cn",
     enabled: true,
   },
 ]; 
