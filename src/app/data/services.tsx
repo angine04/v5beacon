@@ -162,4 +162,4 @@ export const services: ServiceItem[] = [
     url: "https://lens.npu5v5.cn",
     enabled: true,
   },
-]; 
+];

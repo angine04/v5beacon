@@ -95,9 +95,10 @@ export default function Home() {
           {session?.user && <UserMenu user={session.user} />}
         </div>
 
-        <div className="flex-grow flex flex-col md:flex-row">
-          {/* 左侧面板 - 包含标题和问候区域 */}
-          <div className="md:w-1/2 lg:w-2/5 xl:w-1/3 flex flex-col bg-card/50">
+        {/* 移除在手机上限制滚动的类，只在md及以上应用 */}
+        <div className="flex-grow flex flex-col md:flex-row md:h-screen md:overflow-hidden">
+          {/* 左侧面板 - 在桌面视图下固定不滚动 */}
+          <div className="md:w-1/2 lg:w-2/5 xl:w-1/3 flex flex-col bg-card/50 md:h-screen md:overflow-hidden">
             {/* 标题区域 */}
             <div className="py-6 pl-10 pr-6 sm:py-10 sm:pl-16 sm:pr-10 lg:py-12 lg:pl-20 lg:pr-12">
               <div className="flex items-center gap-3">
@@ -113,7 +114,7 @@ export default function Home() {
             </div>
             
             {/* 问候区域 */}
-            <div className="flex-grow flex flex-col pt-[20vh] pl-10 pr-6 sm:pl-16 sm:pr-10 lg:pl-20 lg:pr-12 mb-16">
+            <div className="flex-grow flex flex-col pt-[10vh] md:pt-[20vh] pl-10 pr-6 sm:pl-16 sm:pr-10 lg:pl-20 lg:pr-12 mb-16">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-2 md:mb-3 lg:mb-4">
                 {session?.user?.name || '同学'}
               </h3>
@@ -131,11 +132,18 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* 页脚 - 在桌面端显示在左侧面板底部 */}
+            <div className="hidden md:block py-6 pl-10 pr-6 sm:py-10 sm:pl-16 sm:pr-10 lg:py-12 lg:pl-20 lg:pr-12">
+              <p className="text-xs text-muted-foreground">
+                &copy; {new Date().getFullYear()} v5++ 团队. 保留所有权利.
+              </p>
+            </div>
           </div>
           
-          {/* 右侧服务卡片区域 - 可滚动 */}
-          <div className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-6 md:p-10 overflow-y-auto flex items-center">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
+          {/* 右侧服务卡片区域 - 确保内容完整显示且不被裁剪 */}
+          <div className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-6 md:pt-16 md:pb-16 md:px-10 md:h-screen md:overflow-y-auto flex">
+            <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 my-auto">
               {services.filter(service => service.enabled).map((service, index) => (
                 <ServiceCard key={index} {...service} />
               ))}
@@ -143,16 +151,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* 页脚 - 在移动端显示在底部，桌面端隐藏 */}
+        {/* 页脚 - 在移动端显示在底部 */}
         <div className="md:hidden py-6 px-6 sm:px-10">
           <p className="text-xs text-muted-foreground text-center">
-            &copy; {new Date().getFullYear()} v5++ 团队. 保留所有权利.
-          </p>
-        </div>
-
-        {/* 页脚 - 在桌面端显示在左侧面板，移动端隐藏 */}
-        <div className="hidden md:block absolute bottom-0 left-0 w-1/2 lg:w-2/5 xl:w-1/3 py-6 pl-10 pr-6 sm:py-10 sm:pl-16 sm:pr-10 lg:py-12 lg:pl-20 lg:pr-12">
-          <p className="text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} v5++ 团队. 保留所有权利.
           </p>
         </div>
