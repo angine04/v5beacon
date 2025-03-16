@@ -5,6 +5,7 @@ import { signIn } from "next-auth/react";
 import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 function SignInContent() {
   const searchParams = useSearchParams();
@@ -14,6 +15,15 @@ function SignInContent() {
   return (
     <Card className="w-full max-w-lg">
       <CardHeader className="text-center">
+        <div className="flex justify-center mb-4">
+          <Image 
+            src="/service-logos/beacon.png" 
+            alt="Beacon Logo" 
+            width={80} 
+            height={80} 
+            className="object-contain"
+          />
+        </div>
         <CardTitle className="text-3xl font-bold">v5Beacon</CardTitle>
         <CardDescription className="mt-2">
           登录以访问 v5++ 团队服务
@@ -60,6 +70,9 @@ export default function SignIn() {
       <Suspense fallback={
         <Card className="w-full max-w-lg">
           <CardHeader className="text-center">
+            <div className="flex justify-center mb-4">
+              <div className="w-20 h-20 rounded-full bg-muted animate-pulse"></div>
+            </div>
             <CardTitle className="text-3xl font-bold">加载中...</CardTitle>
           </CardHeader>
         </Card>

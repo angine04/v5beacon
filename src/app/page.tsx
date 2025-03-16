@@ -135,6 +135,17 @@ export default function Home() {
 
             {/* 页脚 - 在桌面端显示在左侧面板底部 */}
             <div className="hidden md:block py-6 pl-10 pr-6 sm:py-10 sm:pl-16 sm:pr-10 lg:py-12 lg:pl-20 lg:pr-12">
+              {/* 团队logo */}
+              <div className="flex items-center mb-4">
+                <Image 
+                  src="/logo.png" 
+                  alt="v5++ Team Logo" 
+                  width={48} 
+                  height={48} 
+                  className="object-contain mr-2"
+                />
+                {/* <span className="text-sm font-medium text-muted-foreground">v5++ 团队</span> */}
+              </div>
               <p className="text-xs text-muted-foreground">
                 &copy; {new Date().getFullYear()} v5++ 团队. 保留所有权利.
               </p>
@@ -153,6 +164,17 @@ export default function Home() {
 
         {/* 页脚 - 在移动端显示在底部 */}
         <div className="md:hidden py-6 px-6 sm:px-10">
+          {/* 团队logo - 移动端 */}
+          <div className="flex items-center justify-center mb-6">
+            <Image 
+              src="/logo.png" 
+              alt="v5++ Team Logo" 
+              width={48} 
+              height={48} 
+              className="object-contain mr-2"
+            />
+            {/* <span className="text-sm font-medium text-muted-foreground">v5++ 团队</span> */}
+          </div>
           <p className="text-xs text-muted-foreground text-center">
             &copy; {new Date().getFullYear()} v5++ 团队. 保留所有权利.
           </p>
