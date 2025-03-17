@@ -1,6 +1,5 @@
 <div align="center">
-  <h1>v5Beacon</h1>
-  <img src="https://raw.githubusercontent.com/angine04/v5beacon/refs/heads/main/public/service-logos/beacon.png" width="128" height="128" alt="v5Beacon Logo" style="margin:12px;">
+  <img src="https://raw.githubusercontent.com/angine04/v5beacon/refs/heads/main/public/service-logos/beacon.png" width="128" height="128" alt="v5Beacon Logo" style="display:inline; margin:12px;"> <h1>v5Beacon</h1>
 </div>
 
 v5Beacon 是 Team v5++ 的服务门户，集成了团队所有服务的访问入口。该项目使用 Next.js 构建，并通过 Authentik OIDC 提供身份验证。
