@@ -6,7 +6,7 @@
 v5Beacon 是 Team v5++ 的服务门户，集成了团队所有服务的访问入口。该项目使用 Next.js 构建，并通过 Authentik OIDC 提供身份验证。
 
 <div align="center">
-![demo](https://github.com/user-attachments/assets/c6645d41-f772-4d3f-bb4f-dde7ff9990a7)
+  <img src="https://github.com/user-attachments/assets/c6645d41-f772-4d3f-bb4f-dde7ff9990a7"  alt="v5Beacon Demo" style="margin:12px;">
 </div>
 
 ## 功能特性
