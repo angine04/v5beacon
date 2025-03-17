@@ -144,10 +144,10 @@ export default function Home() {
                   height={48} 
                   className="object-contain mr-2"
                 />
-                {/* <span className="text-sm font-medium text-muted-foreground">v5++ 团队</span> */}
+                {/* <span className="text-sm font-medium text-muted-foreground">Team v5++</span> */}
               </div>
               <p className="text-xs text-muted-foreground">
-                &copy; {new Date().getFullYear()} v5++ 团队. 保留所有权利.
+                &copy; {new Date().getFullYear()} Team v5++. 保留所有权利.
               </p>
             </div>
           </div>
@@ -173,10 +173,10 @@ export default function Home() {
               height={48} 
               className="object-contain mr-2"
             />
-            {/* <span className="text-sm font-medium text-muted-foreground">v5++ 团队</span> */}
+            {/* <span className="text-sm font-medium text-muted-foreground">Team v5++</span> */}
           </div>
           <p className="text-xs text-muted-foreground text-center">
-            &copy; {new Date().getFullYear()} v5++ 团队. 保留所有权利.
+            &copy; {new Date().getFullYear()} Team v5++. 保留所有权利.
           </p>
         </div>
       </div>

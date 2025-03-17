@@ -26,7 +26,7 @@ function SignInContent() {
         </div>
         <CardTitle className="text-3xl font-bold">v5Beacon</CardTitle>
         <CardDescription className="mt-2">
-          登录以访问 v5++ 团队服务
+          登录以访问 Team v5++服务
         </CardDescription>
       </CardHeader>
       <CardContent>

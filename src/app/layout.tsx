@@ -12,8 +12,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "v5Beacon - v5++ 团队服务门户",
-  description: "v5++ 团队的服务集合门户",
+  title: "v5Beacon - Team v5++服务门户",
+  description: "Team v5++的服务集合门户",
 };
 
 export default function RootLayout({
